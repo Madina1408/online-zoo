@@ -1,0 +1,122 @@
+#pets {
+  margin-top: -2rem;
+  .wrapper {
+    width: 100%;
+    .first-container {
+      display: flex;
+      width: 82.5%;
+      margin: auto;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 14rem;
+      a{
+       cursor: pointer;
+       &:hover{
+        div{
+          opacity: 0.9;
+          transition: all 0.3s ease-in-out;
+        }
+       }
+       &:active{
+        div{
+          background: #4B9200;
+        }
+       }
+       div{
+        background: #e47209;
+        width: 6.2rem;
+        height: 6.2rem;
+        border-radius: 50%;
+        padding-left:2.3rem ;
+        padding-top: 1.9rem;
+        .arrow{
+          color: white;
+          font-size: large;
+          // width:16px ;
+        }
+       }
+      }
+      .slider-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 2rem;
+        column-gap: 2.5rem;
+        .slider-container_item {
+          display: flex;
+          flex-direction: column;
+          gap: 0.3rem;
+          border: solid 1px orangered;
+          border-radius: 5px;
+          overflow: hidden;
+          box-sizing: border-box;
+          &:hover{
+            transform: scale(1.05);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            // position: absolute;
+          }
+          .animal-info {
+            width: 92%;
+            margin: auto;
+            display: flex;
+            padding-bottom: 1.4rem;
+            justify-content: space-between;
+            .animal-name {
+              h6 {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 140%;
+                text-transform: uppercase;
+              }
+              p {
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .second-container {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-top: -23rem;
+      // .palm-image {
+      // }
+      .btn-div {
+        height: 12.5rem;
+        // padding-top: -30rem;
+        .btn {
+          // @include orange-button;
+          background: linear-gradient(
+            113.96deg,
+            #f9804b 1.49%,
+            #fe9013 101.44%
+          );
+          border-radius: 25px;
+          width: 29.8rem;
+          height: 5.4rem;
+          font-weight: 500;
+          font-size: 16px;
+          border: none;
+          line-height: 140%;
+          text-align: center;
+          text-transform: uppercase;
+          color: #ffffff;
+          margin-top: -300rem;
+          margin-left: 7rem;
+          &:hover {
+            background: #e47209;
+            cursor: pointer;
+          }
+          &:active{
+            background: #4B9200;
+          }
+        }
+      }
+    }
+  }
+}
