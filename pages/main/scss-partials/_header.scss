@@ -25,8 +25,21 @@ header {
         }
       }
       .nav__items {
+        .active{
+          a{
+            color: #F9804B;
+          }
+        }
         display: flex;
+        list-style: none;
         gap: 5.8rem;
+        li{
+          &:active{
+            a{
+              color: #F9804B;
+            }
+          }
+        }
         a {
           font-size: 1.6rem;
           font-weight: 500;
@@ -38,6 +51,8 @@ header {
             background-clip: text;
             transition: all 0.3s ease-in-out;
           }
+          &:active{
+            background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);}
         }
       }
     }

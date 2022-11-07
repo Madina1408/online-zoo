@@ -91,7 +91,13 @@ footer {
       gap: 3.2rem;
       .nav__items {
         display: flex;
+        list-style: none;
         gap: 5.8rem;
+        .active{
+          a{
+            color: #f9804b;
+          }
+        }
         a {
           font-size: 1.6rem;
           font-weight: 400;
@@ -181,4 +187,7 @@ footer {
       }
     }
   }
+}
+.donate-footer{
+  margin-top: 0 !important;
 }
