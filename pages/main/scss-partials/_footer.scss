@@ -70,6 +70,10 @@ footer {
               color: white;
             }
           }
+          &:hover{
+            opacity: 0.7;
+            font-weight: bold;
+          }
           .circle {
             height: 2.6rem;
             width: 2.6rem;

@@ -47,7 +47,7 @@
     </header>
 
     <main>
-      <section>
+      <section id="image">
         <img src="../../assets/images/panda_bg.png" alt="" />
       </section>
 
@@ -97,65 +97,67 @@
               <div class="progress-container">
                 <p>Amount</p>
                 <div class="progress-div">
-                  <label style="display: flex;" for="one"
-                    ><input type="radio" name="circle" id="one" />
+                  <label style="display: flex;" for="first"
+                    ><input type="radio" name="circle" id="first" />
+                    <div class="dot"></div>
                     <div class="outer-circle-one">
-                      <div class="inner-circle-one"><div class="dot"></div></div>
+                      <div class="inner-circle-one">
+                      </div>
                     </div>
                     <hr
                   /></label>
-                  <label style="display: flex;" for="one"
-                    ><input type="radio" name="circle" id="one" />
+                  <label style="display: flex;" for="two"
+                    ><input type="radio" name="circle" id="two" />
                     <div class="dot"></div>
                     <div class="outer-circle">
                       <div class="inner-circle"></div>
                     </div>
                     <hr /></label
-                  ><label style="display: flex;" for="one"
-                    ><input type="radio" checked name="circle" id="one" />
+                  ><label style="display: flex;" for="three"
+                    ><input type="radio" checked name="circle" id="three" />
                     <div class="dot"></div>
                     <div class="outer-circle">
                       <div class="inner-circle"></div>
                     </div>
                     <hr /></label
-                  ><label style="display: flex;" for="one"
-                    ><input type="radio" name="circle" id="one" />
+                  ><label style="display: flex;" for="four"
+                    ><input type="radio" name="circle" id="four" />
                     <div class="dot"></div>
                     <div class="outer-circle">
                       <div class="inner-circle"></div>
                     </div>
                     <hr /></label
-                  ><label style="display: flex;" for="one"
-                    ><input type="radio" name="circle" id="one" />
+                  ><label style="display: flex;" for="five"
+                    ><input type="radio" name="circle" id="five" />
                     <div class="dot"></div>
                     <div class="outer-circle">
                       <div class="inner-circle"></div>
                     </div>
                     <hr /></label
-                  ><label style="display: flex;" for="one"
-                    ><input type="radio" name="circle" id="one" />
+                  ><label style="display: flex;" for="six"
+                    ><input type="radio" name="circle" id="six" />
                     <div class="dot"></div>
                     <div class="outer-circle">
                       <div class="inner-circle"></div>
                     </div>
                     <hr /></label
-                  ><label style="display: flex;" for="one"
-                    ><input type="radio" name="circle" id="one" />
+                  ><label style="display: flex;" for="seven"
+                    ><input type="radio" name="circle" id="seven" />
                     <div class="dot"></div>
                     <div class="outer-circle">
                       <div class="inner-circle"></div>
                     </div>
                     <hr /></label
-                  ><label style="display: flex;" for="one"
-                    ><input type="radio" name="circle" id="one" />
+                  ><label style="display: flex;" for="eight"
+                    ><input type="radio" name="circle" id="eight" />
                     <div class="dot"></div>
                     <div class="outer-circle">
                       <div class="inner-circle"></div>
                     </div>
-                </label>
+                  </label>
                 </div>
                 <div class="dollar-amount">
-                  <p>$5000</p>
+                  <p class="para1">$5000</p>
                   <p>$2000</p>
                   <p style="color: #fe9013;">$1000</p>
                   <p>$500</p>
@@ -166,38 +168,23 @@
                 </div>
               </div>
               <div class="form-container">
-                <input
-                  type="number"
-                  maxlength="4"
-                  placeholder="Another amount                        $"
-                />
+                <div class="another-amount-container">
+                  <input
+                    class="another-amount"
+                    type="number"
+                    onKeyPress="if(this.value.length==4) return false;"
+                    placeholder="Another amount"
+                  />
+                  <span>$</span>
+                </div>
                 <div class="radio-items">
-                  <!-- <div class="radio-items_one">
-                    <input
-                      type="radio"
-                      id="monthly"
-                      value="Monthly"
-                      name="choice"
-                    />
-                    <label for="monthly">Monthly</label>
-                  </div>
-                  <div class="radio-items_two">
-                    <input
-                      type="radio"
-                      id="once"
-                      checked
-                      value="Once"
-                      name="choice"
-                    />
-                    <label for="once">Once</label>
-                  </div> -->
                   <label for="month" class="radio">
                     <input type="radio" name="choice" id="month" />
                     Monthly
                     <span></span>
                   </label>
-                  <label for="one" class="radio">
-                    <input type="radio" checked name="choice" id="one" />
+                  <label for="once" class="radio">
+                    <input type="radio" checked name="choice" id="once" />
                     Once
                     <span></span>
                   </label>
@@ -215,17 +202,11 @@
       <div class="wrapper">
         <div class="container-socials">
           <a style="color: white;" href="../../index.html">
-            <div class="footer__logo">
-              <h1>
-                PetStory
-                <span style="font-size: 1.9rem; position: relative;"
-                  >o<img
-                    style="position: absolute; left: -4px; bottom: 4px;"
-                    src="../../assets/icons/bamboo.svg"
-                    alt="" /></span
-                >nline
-              </h1>
-            </div>
+            <img
+              style="font-weight: noraml;"
+              src="../../assets/images/logo_footer.png"
+              alt=""
+            />
           </a>
           <a href="#donate"
             ><button class="btn">donate for volunteers</button></a
