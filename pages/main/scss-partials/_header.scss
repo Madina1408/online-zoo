@@ -1,0 +1,71 @@
+header {
+  background-color: black;
+  color: white;
+  .wrapper {
+    // padding-top: 1.4rem ;
+    align-items: center;
+    width: 72.5%;
+    height: 8rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    .navigation {
+      display: flex;
+      align-items: center;
+      gap: 6.3rem;
+      justify-content: space-between;
+      .nav__logo {
+        width: 8.2rem;
+        height: 5.2rem;
+        border: solid 2px white;
+        h1 {
+          font-size: 1.9rem;
+          font-weight: 400;
+          text-align: center;
+        }
+      }
+      .nav__items {
+        .active{
+          a{
+            color: #F9804B;
+          }
+        }
+        display: flex;
+        list-style: none;
+        gap: 5.8rem;
+        li{
+          &:active{
+            a{
+              color: #F9804B;
+            }
+          }
+        }
+        a {
+          font-size: 1.6rem;
+          font-weight: 500;
+          color: white;
+          &:hover{
+            background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: all 0.3s ease-in-out;
+          }
+          &:active{
+            background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);}
+        }
+      }
+    }
+    .nav__items a:active{
+      color: green !important;
+    }
+    .nav__figma-link a {
+      font-size: 1.6rem;
+      font-weight: 500;
+      &:active{
+        color:  #4B9200;
+        text-decoration: underline;
+      }
+    }
+  }
+}

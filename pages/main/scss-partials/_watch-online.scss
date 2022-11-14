@@ -1,0 +1,53 @@
+#watch-online {
+  height: 70rem;
+  background-image: url("../../../assets/images/panda.png");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  // width: 100%;
+  padding-top: 1.2rem;
+  padding-left: 80.7rem;
+  .wrapper {
+    width: 46.5rem;
+    height: 46.5rem;
+    background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+    border-radius: 50%;
+    padding-top: 7.4rem;
+    padding-left: 7.3rem;
+    h2,
+    span {
+      width: 50.031rem;
+      height: 40rem;
+      font-size: 10.65rem;
+      line-height: 7.987rem;
+      text-transform: uppercase;
+      text-align: center;
+      color: white;
+      span {
+        color: #ffee2e;
+      }
+    }
+  }
+  .btn {
+    // @include orange-button;
+    background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+    border-radius: 25px;
+    width: 29.8rem;
+    height: 5.4rem;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 6.8rem;
+    border: none;
+    margin-left: 17.7rem;
+    &:hover {
+      background: #e47209;
+      cursor: pointer;
+    }
+    &:active{
+      background: #4B9200;
+    }
+  }
+}
