@@ -9,32 +9,32 @@
       align-items: center;
       gap: 2rem;
       margin-top: 14rem;
-      a{
-       cursor: pointer;
-       &:hover{
-        div{
-          opacity: 0.9;
-          transition: all 0.3s ease-in-out;
+      a {
+        cursor: pointer;
+        &:hover {
+          div {
+            opacity: 0.9;
+            transition: all 0.3s ease-in-out;
+          }
         }
-       }
-       &:active{
-        div{
-          background: #4B9200;
+        &:active {
+          div {
+            background: #4b9200;
+          }
         }
-       }
-       div{
-        background: #e47209;
-        width: 6.2rem;
-        height: 6.2rem;
-        border-radius: 50%;
-        padding-left:2.3rem ;
-        padding-top: 1.9rem;
-        .arrow{
-          color: white;
-          font-size: large;
-          // width:16px ;
+        div {
+          background: #e47209;
+          width: 6.2rem;
+          height: 6.2rem;
+          border-radius: 50%;
+          padding-left: 2.3rem;
+          padding-top: 1.9rem;
+          .arrow {
+            color: white;
+            font-size: large;
+            // width:16px ;
+          }
         }
-       }
       }
       .slider-container {
         display: grid;
@@ -49,7 +49,7 @@
           border-radius: 5px;
           overflow: hidden;
           box-sizing: border-box;
-          &:hover{
+          &:hover {
             transform: scale(1.05);
             margin-bottom: 2rem;
             transition: all 0.3s ease-in-out;
@@ -79,16 +79,16 @@
         }
       }
     }
+    .first-container-small-desktop {
+      display: none;
+    }
     .second-container {
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
       margin-top: -23rem;
-      // .palm-image {
-      // }
       .btn-div {
         height: 12.5rem;
-        // padding-top: -30rem;
         .btn {
           // @include orange-button;
           background: linear-gradient(
@@ -112,9 +112,243 @@
             background: #e47209;
             cursor: pointer;
           }
-          &:active{
-            background: #4B9200;
+          &:active {
+            background: #4b9200;
           }
+        }
+      }
+    }
+    .second-container-mobile{
+      display: none;
+    }
+  }
+}
+.palm-image1 {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  #pets {
+    margin-top: 6.5rem;
+    .wrapper {
+      .first-container {
+        display: none;
+      }
+      .first-container-small-desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 94%;
+        padding-left: 2px;
+        gap: 1.5rem;
+        margin: auto;
+        .slider-container {
+          display: flex;
+          gap: 2.9rem;
+          .slider-container_item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            border: solid 1px #fe9013;
+            border-radius: 5px;
+            overflow: hidden;
+            box-sizing: border-box;
+            &:hover {
+              transform: scale(1.05);
+              margin-bottom: 2rem;
+              transition: all 0.3s ease-in-out;
+              cursor: pointer;
+            }
+            .animal-info {
+              width: 92%;
+              margin: auto;
+              display: flex;
+              padding-left: 0.5rem;
+              padding-bottom: 1.2rem;
+              justify-content: space-between;
+              .animal-name {
+                h6 {
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 140%;
+                  text-transform: uppercase;
+                }
+                p {
+                  font-weight: 300;
+                  font-size: 15px;
+                  line-height: 120%;
+                }
+              }
+            }
+            .animal-image-div {
+              img {
+                width: 29.4rem;
+                height: 29.4rem;
+              }
+            }
+          }
+        }
+        .small-desktop-arrow-div {
+          display: flex;
+          gap: 17.1rem;
+          .orange-circle {
+            background: #e47209;
+            width: 6.2rem;
+            height: 6.2rem;
+            border-radius: 50%;
+            padding-left: 2.3rem;
+            padding-top: 1.9rem;
+            .arrow {
+              color: white;
+              font-size: large;
+            }
+          }
+        }
+      }
+      .second-container {
+        margin-top: 7rem;
+        // align-items: flex-start;
+        .palm-image {
+          display: none;
+        }
+        .palm-image1 {
+          display: block;
+        }
+        .another-image {
+          width: 241px;
+          height: 180px;
+        }
+        .btn-div {
+          height: 17rem;
+          .btn {
+            margin-left: 4.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #pets {
+    margin-top: 3rem;
+    .chetah-hide {
+      display: none !important;
+    }
+    .penguin-hide {
+      display: none !important;
+    }
+    .first-container-small-desktop {
+      width: 93.75% !important;
+      gap: 1.1rem !important;
+      .small-desktop-arrow-div {
+        gap: 3rem !important;
+        margin-bottom: 0.8rem;
+      }
+      .slider-container_item {
+        .animal-image-div {
+          img {
+            width: 28.5rem !important;
+            height: 28.5rem !important;
+          }
+        }
+        .animal-info {
+          padding-bottom: 1rem !important;
+          width: 94% !important;
+          img {
+            width: 37.41px;
+            height: 29.62px;
+          }
+          .animal-name {
+            h6 {
+              font-size: 12.4695px !important;
+              line-height: 140%;
+            }
+            p {
+              font-size: 11.6901px !important;
+              line-height: 120%;
+            }
+          }
+        }
+      }
+    }
+    .second-container {
+      margin-top: 1rem !important;
+      height: 20rem;
+
+        .palm-image {
+        padding-top: -1rem;
+        display: block !important;
+        width: 150px;
+        height: 202px;
+      }
+      .palm-image1 {
+        display: none !important;
+      }
+      .another-image-div{
+        .another-image {
+        width: 171px !important;
+        height: 131px !important;
+      }
+      }
+
+      .btn-div {
+        height: 13.1rem !important;
+        .btn {
+          margin-left: 4.3rem !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px){
+  #pets{
+    margin-top: 5rem !important ;
+    .slider-container{
+      flex-direction: column;
+      gap: 2rem !important;
+    }
+    .small-desktop-arrow-div{
+      display: none !important;
+    }
+    .second-container{
+      display: none !important;
+    }
+    .second-container-mobile{
+      display: block !important;
+      .btn{
+        background: linear-gradient(
+            113.96deg,
+            #f9804b 1.49%,
+            #fe9013 101.44%
+          );
+          border-radius: 25px;
+          width: 29.8rem;
+          height: 5.4rem;
+          font-weight: 500;
+          font-size: 16px;
+          border: none;
+          line-height: 140%;
+          text-align: center;
+          text-transform: uppercase;
+          margin-top: 2rem;
+          margin-left: 1rem;
+          color: #ffffff;
+          &:hover {
+            background: #e47209;
+            cursor: pointer;
+          }
+          &:active {
+            background: #4b9200;
+          }
+      }
+      .mobile-images{
+        margin-top: -1rem;
+        display: flex;
+        justify-content: space-between;
+        .second-image{
+          margin-bottom: -1rem;
         }
       }
     }

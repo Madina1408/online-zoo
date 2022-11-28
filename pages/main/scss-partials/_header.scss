@@ -1,7 +1,11 @@
 header {
+  width: 100%;
   background-color: black;
   color: white;
   .wrapper {
+    .tablet-mobile-logo{
+      display: none;
+    }
     // padding-top: 1.4rem ;
     align-items: center;
     width: 72.5%;
@@ -9,7 +13,13 @@ header {
     margin: auto;
     display: flex;
     justify-content: space-between;
+    .burger-menu{
+      display: none;
+    }
     .navigation {
+      .hide-logo{
+        display: none;
+      }
       display: flex;
       align-items: center;
       gap: 6.3rem;
@@ -25,18 +35,18 @@ header {
         }
       }
       .nav__items {
-        .active{
-          a{
-            color: #F9804B;
+        .active {
+          a {
+            color: #f9804b;
           }
         }
         display: flex;
         list-style: none;
         gap: 5.8rem;
-        li{
-          &:active{
-            a{
-              color: #F9804B;
+        li {
+          &:active {
+            a {
+              color: #f9804b;
             }
           }
         }
@@ -44,27 +54,87 @@ header {
           font-size: 1.6rem;
           font-weight: 500;
           color: white;
-          &:hover{
-            background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+          &:hover {
+            background: linear-gradient(
+              113.96deg,
+              #f9804b 1.49%,
+              #fe9013 101.44%
+            );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             transition: all 0.3s ease-in-out;
           }
-          &:active{
-            background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);}
+          &:active {
+            background: linear-gradient(
+              113.96deg,
+              #f9804b 1.49%,
+              #fe9013 101.44%
+            );
+          }
         }
       }
     }
-    .nav__items a:active{
+    .nav__items a:active {
       color: green !important;
     }
     .nav__figma-link a {
       font-size: 1.6rem;
       font-weight: 500;
-      &:active{
-        color:  #4B9200;
+      &:active {
+        color: #4b9200;
         text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header {
+    .wrapper {
+      width: 94%;
+      // height: 100px;
+      .navigation {
+        img{
+          width: 8.2rem;
+          height: 5.2;
+        }
+        .nav__items {
+          gap: 4.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px){
+  header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    .wrapper{
+      width: 93.75% !important;
+      height:3.4rem;
+      .small-desktop-logo{
+        display: none;
+      }
+      .tablet-mobile-logo{
+        display: block !important;
+        width: 4.7rem !important;
+        height: 2.9rem;
+      }
+      .burger-menu{
+        display: block !important;
+        .menu{
+          font-size: x-large;
+          font-weight: 100;
+        }
+      }
+      .nav__figma-link{
+        display: none;
+      }
+      .nav__items{
+        display: none !important;
       }
     }
   }
