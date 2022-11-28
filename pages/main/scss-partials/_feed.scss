@@ -32,7 +32,6 @@
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    // align-items: center;
     gap: 6rem;
     padding-top: 4.1rem;
     // padding-left: 9.9rem;
@@ -64,7 +63,6 @@
         flex-direction: column;
         gap: 1rem;
         padding-left: 9.9rem;
-
         h6 {
           font-weight: 500;
           font-size: 16px;
@@ -96,24 +94,28 @@
         // margin-left: -9.9rem;
       }
       .howitworks-method {
+        .green-arrow1,
+        .green-arrow2 {
+          display: none !important;
+        }
         width: 52.5%;
         margin: auto;
         display: flex;
         // align-items: center;
         justify-content: center;
         gap: 3.1rem;
-        .arrow-image{
+        .arrow-image {
           margin-top: -8rem;
         }
         .howitworks-method_item {
           display: flex;
           flex-direction: column;
           gap: 3rem;
-          p{
+          p {
             font-weight: 400;
             font-size: 16px;
             line-height: 140%;
-            color: #333B41;
+            color: #333b41;
           }
           .image-div {
             width: 16.8rem;
@@ -121,7 +123,7 @@
             background-color: white;
             padding: auto;
             border: solid 1px orangered;
-          border-radius: 5px;
+            border-radius: 5px;
           }
           .one {
             padding-top: 5.4rem;
@@ -155,10 +157,165 @@
     margin-bottom: 6rem;
     &:hover {
       background: #e47209;
-      cursor: pointer
+      cursor: pointer;
     }
-    &:active{
-      background: #4B9200;
+    &:active {
+      background: #4b9200;
     }
+  }
+}
+@media screen and (max-width: 1000px) {
+  #feed {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    margin-bottom: 10rem;
+    .wrapper {
+      width: 94%;
+      padding-top: 3rem;
+      gap: 4rem;
+      .pick-container {
+        gap: 2.1rem;
+        .pick-container_intro {
+          gap: 2rem;
+          h5 {
+            margin-left: 4.9rem !important;
+            padding-top: 1px;
+          }
+        }
+        .covid-info-div {
+          padding-left: 4.9rem !important;
+          width: 90%;
+          .break-hide {
+            display: none;
+          }
+        }
+      }
+      .howitworks-container {
+        .howitworks-method {
+          gap: 3rem;
+        }
+      }
+    }
+    .btn {
+      margin-bottom: 5rem !important;
+      margin-top: 3.3rem;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  #feed {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 6rem;
+    .wrapper {
+      width: 100%;
+      padding-top: 1rem;
+      gap: 3rem;
+      .pick-container {
+        h2 {
+          font-size: 4.2rem !important;
+        }
+        .pick-container_intro {
+          gap: 1.5rem;
+          h5 {
+            margin-left: 2rem !important;
+            padding-top: 4px;
+            width: 96% !important;
+            font-size: 22px;
+          }
+        }
+        .covid-info-div {
+          padding-left: 2rem !important;
+          width: 97%;
+        }
+      }
+      .howitworks-container {
+        gap: 2rem;
+        .arrow-image {
+          display: none;
+        }
+        .howitworks-method {
+          position: relative;
+          gap: 4.2rem;
+          width: 94%;
+          .green-arrow1 {
+            display: block !important;
+            position: absolute;
+            left: 23%;
+            top: -1.5rem;
+          }
+          .green-arrow2 {
+            display: block !important;
+            position: absolute;
+            left: 57.5%;
+            top: -1.5rem;
+          }
+        }
+      }
+      .btn {
+        margin-top: 1rem !important;
+        margin-bottom: 6rem !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  #feed {
+    margin-bottom: 2.9rem ;
+    padding-bottom: 2rem !important;
+    .wrapper {
+      width: 93.75% !important;
+      padding-bottom: 0rem !important;
+      gap: 2rem !important;
+      padding-top: 2rem !important;
+      .pick-container {
+        .pick-container_intro {
+          gap: 0.7rem !important;
+          h2 {
+            font-size: 24px !important;
+            line-height: 120%;
+          }
+          h5 {
+            font-size: 18px !important;
+            line-height: 120%;
+            margin-left: 0.6rem !important;
+            text-align: center;
+            width: 95% !important;
+          }
+        }
+        .covid-info-div {
+          display: none;
+        }
+      }
+      .btn{
+        margin-bottom: 4rem !important ;
+        // margin-top: rem !important;
+      }
+    }
+    .howitworks-container {
+      gap: 1.8rem !important;
+      h3 {
+        font-size: 24px !important;
+        line-height: 120%;
+      }
+      .howitworks-method {
+        gap: 4rem !important;
+        padding-left: 5.7rem;
+        flex-direction: column;
+        .howitworks-method_item{
+          gap: 1rem !important;
+          p{
+            width: 70%;
+          }
+        }
+        .different-gap{
+          margin-top: -1rem;
+          p{
+            margin-bottom: 0.9rem;
+          }
+        }
+      }
+    }
+
   }
 }

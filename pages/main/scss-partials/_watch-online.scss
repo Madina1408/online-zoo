@@ -3,7 +3,7 @@
   background-image: url("../../../assets/images/panda.png");
   background-repeat: no-repeat;
   object-fit: cover;
-  // width: 100%;
+  width: 100%;
   padding-top: 1.2rem;
   padding-left: 80.7rem;
   .wrapper {
@@ -46,8 +46,88 @@
       background: #e47209;
       cursor: pointer;
     }
-    &:active{
-      background: #4B9200;
+    &:active {
+      background: #4b9200;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #watch-online {
+    height: 50.4rem;
+    padding-top: 0 !important;
+    padding-left: 45.6rem;
+    .wrapper {
+      width: 367px;
+      height: 367px;
+      padding-top: 4.5rem;
+      padding-left: 1rem;
+      h2,
+      span {
+        font-size: 8.5rem;
+        line-height: 75%;
+      }
+    }
+    .btn {
+      margin-top: 3.6rem !important ;
+      margin-left: 10.9rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #watch-online {
+    object-fit: contain !important;
+    height: 37.4rem;
+    padding-top: 1rem !important;
+    padding-left: 33.1rem;
+    .wrapper {
+      margin-top: 3.4rem;
+      width: 23.76rem;
+      height: 23.76rem;
+      padding-left: 3.7rem;
+      padding-top: 3.78rem;
+      h2,
+      span {
+        width: 25.5rem;
+        font-weight: 700;
+        font-size: 54.2894px;
+        line-height: 75%;
+      }
+    }
+    .btn {
+      margin-left: -31rem !important;
+      margin-top: -2px !important ;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #watch-online {
+    background-image: url(../../../assets/images/Giant-panda-mobile.png) !important;
+    object-fit: cover;
+    width: 100%;
+    height: 22.5rem !important;
+    padding-top: 2.2rem !important;
+    padding-left: 0;
+    // padding-bottom: 8rem !important;
+    background-size: 100% 22rem;
+    .wrapper {
+      margin-left: 16.5rem !important;
+      padding-top: 1.9rem;
+      padding-left: 1.87rem;
+      width: 119.09px;
+      height: 119.09px;
+      h2,
+      span {
+        font-size: 28px;
+        line-height: 75%;
+        width: 128.13px !important;
+      }
+    }
+    .btn {
+      margin-left: 1rem !important;
+      margin-top:6.7rem !important;
     }
   }
 }

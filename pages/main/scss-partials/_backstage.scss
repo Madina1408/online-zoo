@@ -14,16 +14,14 @@
     .container {
       display: flex;
       gap: 8.7rem;
+      .small-bamboo {
+        display: none;
+      }
       .wrapper-info {
         display: flex;
         flex-direction: column;
         gap: 5.4rem;
         width: 40%;
-        p {
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 120%;
-        }
         .wrapper-info_intro {
           display: flex;
           flex-direction: column;
@@ -31,7 +29,12 @@
           h2 {
             font-weight: 400;
             font-size: 48px;
-            line-height: 120%;
+            line-height: 125%;
+          }
+          p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
           }
         }
         .wrapper-howitworks {
@@ -42,6 +45,103 @@
             font-weight: 400;
             font-size: 24px;
             line-height: 120%;
+          }
+          p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #backstage {
+    background: none;
+    .wrapper {
+      width: 94%;
+      padding-top: 10rem;
+      align-items: center;
+      justify-content: center;
+      // height: 42.7rem;
+      .container {
+        gap: 3.1rem;
+        .large-bamboo {
+          display: none;
+        }
+        .small-bamboo {
+          display: block;
+          padding-top: 8px;
+          width: 455px;
+          height: 416px;
+        }
+        .wrapper-info {
+          width: 48.1%;
+          gap: 3rem;
+          h2 {
+            line-height: 120% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #backstage {
+    height: 47.6rem;
+    background-image: url("../../../assets/images/flowertoright-small.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    .small-bamboo {
+      display: none !important;
+    }
+    .wrapper {
+      padding-top: 6rem;
+      .wrapper-info {
+        width: 77% !important;
+        .wrapper-howitworks {
+          gap: 2rem !important;
+          h4 {
+            padding-left: 4px;
+          }
+        }
+        .wrapper-info_intro {
+          h2 {
+            padding-left: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #backstage {
+    background-image: url("../../../assets/images/flowertoright-small-mobile.png");
+    background-repeat: no-repeat;
+    background-position: top 3rem right;
+    width: 100%;
+    .wrapper {
+      .container {
+        .wrapper-info {
+          margin-top: 4rem;
+          width: 100% !important;
+          gap: 2rem !important;
+          .wrapper-info_intro {
+            gap: 1rem !important;
+            h2 {
+              font-size: 24px;
+              line-height: 120%;
+            }
+            p {
+              width: 100% !important;
+            }
+          }
+          .wrapper-howitworks{
+            gap: 1rem !important;
           }
         }
       }

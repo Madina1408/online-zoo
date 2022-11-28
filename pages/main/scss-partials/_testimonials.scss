@@ -1,5 +1,6 @@
 #testimonials {
   .wrapper {
+    // margin-top: -2rem;
     width: 72.5%;
     margin: auto;
     h3 {
@@ -13,7 +14,7 @@
     .testimonials-container {
       display: grid;
       grid-template-columns: auto auto auto auto;
-      gap: 3rem;
+      gap: 2.5rem;
       .container-item {
         background: linear-gradient(0deg, #f1f3f2, #f1f3f2);
         padding: 1.6rem;
@@ -23,7 +24,7 @@
         display: flex;
         flex-direction: column;
         gap: 1.1rem;
-        border-color:rgba(243, 169, 248, 0.66);
+        border-color: rgba(243, 169, 248, 0.66);
         border-radius: 20px;
         .author-info {
           display: flex;
@@ -53,7 +54,7 @@
     }
     .line-scroll-div {
       text-align: center;
-      margin-top: 2.1rem;
+      margin-top: 1.5rem;
       input[type="range"] {
         -webkit-appearance: none;
         outline: none;
@@ -63,28 +64,28 @@
         border-radius: 30px;
         box-shadow: inset 1px 1px 5px 2px rgb(226, 226, 226);
         margin-top: 1.5rem;
-     }
+      }
 
-     input[type="range"]:hover::-webkit-slider-thumb {
-        background: #FE9013;
-        box-shadow: -500px 0 0 500px #FE9013;
-     }
+      input[type="range"]:hover::-webkit-slider-thumb {
+        background: #fe9013;
+        box-shadow: -500px 0 0 500px #fe9013;
+      }
 
-     input[type="range"]::-webkit-slider-thumb {
+      input[type="range"]::-webkit-slider-thumb {
         -webkit-appearance: none;
         cursor: pointer;
         width: 3.8rem;
         height: 5px;
-        background: #FE9013;
-        border-right: 6px solid #FE9013;
-        box-shadow: -500px 0 0 500px #FE9013;
-     }
+        background: #fe9013;
+        border-right: 6px solid #fe9013;
+        box-shadow: -500px 0 0 500px #fe9013;
+      }
 
-     input[type="range"]:hover{
-        border: 1px solid #FE9013;
-        outline: #E47209 !important;
-        cursor:pointer;
-     }
+      input[type="range"]:hover {
+        border: 1px solid #fe9013;
+        outline: #e47209 !important;
+        cursor: pointer;
+      }
     }
     .btn {
       background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
@@ -107,5 +108,103 @@
         background: #4b9200;
       }
     }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #testimonials {
+    .wrapper {
+      width: 94%;
+      h3 {
+        margin-bottom: 3rem !important;
+      }
+      .testimonials-container {
+        gap: 3rem !important;
+        .container-item{
+          width: 293px;
+          height: 391px;
+          padding-top: 1rem;
+        }
+        .testimonial-hide-div {
+          display: none !important;
+        }
+      }
+      .line-scroll-div{
+        margin-left: -1rem;
+        margin-top: 0.5rem !important;
+        input[type="range"]{
+          width: 39rem;
+          height: 0.8rem;
+        }
+        input[type="range"]::-webkit-slider-thumb{
+          width: 2.4rem;
+        }
+      }
+      .btn{
+        margin-top: 4.7rem;
+      }
+    }
+  }
+.bg-div-hide{
+  display: none;
+}
+.bg-div-hide-small{
+  display: block !important;
+  margin-top: -10rem !important;
+}
+}
+
+@media screen and (max-width: 640px){
+  #testimonials {
+    .wrapper {
+      .testimonials-container{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem !important;
+        .container-item{
+          width: 100%;
+          height: 10.9rem;
+          padding-left: 0;
+          padding-top: 0;
+          .author-info{
+            margin-left: 1.2rem;
+            margin-top: 1.5rem;
+          }
+          // .special-item{
+          //   margin-top:-0.7rem ;
+          // }
+          .review{
+            margin-left: 1.8rem;
+          }
+        }
+      }
+      .line-scroll-div{
+        display: none;
+      }
+      .btn{
+        margin-top: 4.1rem !important;
+        margin-left: 18rem;
+        width: 24rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px){
+  #testimonials{
+    .wrapper{
+      h3{
+        font-size: 24px;
+        margin-bottom: 1.8rem !important;
+      }
+      .btn{
+      margin-left: 3rem !important;
+      margin-top: 3rem !important;
+      }
+      .author-info{
+        margin-top:0.7rem !important ;
+      }
+    }
+
   }
 }
