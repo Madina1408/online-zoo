@@ -1,0 +1,151 @@
+#navbar {
+  .burger-logo {
+    width: 68px;
+    padding: 0.5rem;
+    border: 0.950725px solid #fe9013;
+    h1 {
+      color: #fe9013;
+      font-weight: 400;
+      font-size: 15.2116px;
+      line-height: 120%;
+      text-align: center;
+    }
+  }
+  display: none;
+  gap: 50rem;
+  .close-btn {
+    color: darkorange;
+    font-size: x-large;
+  }
+  background-color: white;
+  // width: 100%;
+  top: 0rem;
+  left: 0;
+  right: 0;
+  height: 329px;
+  position: absolute;
+  z-index: 999 !important;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  .navbar-div {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    .nav_menu {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        color: #333b41;
+      }
+    }
+  }
+}
+
+.overlay {
+  display: none;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  background: gray;
+  opacity: 0.5;
+  height: 100%;
+}
+
+@media screen and (max-width: 320px) {
+  #navbar {
+    .close-btn {
+      font-size: large;
+    }
+    height: 32rem;
+    gap: 16rem !important;
+    .navbar-div {
+      gap: 2.5rem !important;
+      a {
+        font-size: medium !important;
+      }
+    }
+  }
+}
+
+.review-popup,
+.review-popup1,
+.review-popup2 {
+  display: none;
+  padding-top: 2rem;
+  padding-left: 1.7rem;
+  padding-bottom: 1.7rem;
+  gap: 1.5rem;
+  position: absolute;
+  background: #f5f7f6;
+  left: 25%;
+  top: 0rem;
+  width: 320px;
+  height: 440px;
+  .close-btn {
+    font-size: x-large;
+    color: #fe9013;
+  }
+  .container-item {
+    width: 83%;
+    background: linear-gradient(0deg, #f1f3f2, #f1f3f2);
+    padding: 1.6rem;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    border-color: rgba(243, 169, 248, 0.66);
+    border-radius: 20px;
+    .author-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      .author-name {
+        h6 {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 120%;
+        }
+        p {
+          font-weight: 300;
+          font-size: 15px;
+          line-height: 120%;
+          color: #bdbdbd;
+        }
+      }
+    }
+    p {
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 120%;
+      color: #767474;
+    }
+  }
+}
+.testimonials-overlay,
+.testimonials-overlay1,
+.testimonials-overlay2 {
+  display: none;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  background: gray;
+  opacity: 0.5;
+  height: 100%;
+}
+
+@media screen and (max-width: 320px){
+  .review-popup,
+.review-popup1,
+.review-popup2{
+  left: 1rem ;
+  width: 30rem !important;
+}
+}

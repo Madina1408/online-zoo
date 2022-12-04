@@ -12,6 +12,7 @@
     <title>Donate</title>
   </head>
   <body>
+    <div onclick="closeMenu()" class="overlay"></div>
     <header>
       <div class="wrapper">
         <div class="navigation">
@@ -39,7 +40,27 @@
             <li><a href="#contactus">Contact Us</a></li>
           </ul>
         </div>
-        <div class="burger-menu">
+        <nav id="navbar">
+          <div class="navbar-div">
+            <div class="burger-logo">
+              <h1>PetStory online</h1>
+            </div>
+            <ul class="nav_menu">
+              <li class="nav_item"><a href="../../index.html">About</a></li>
+              <li><a href="#map">Map</a></li>
+              <li><a href="#zoos">Zoos</a></li>
+              <li><a href="./pages/donate/index.html">Donate</a></li>
+              <li><a href="#contactus">Contact Us</a></li>
+              <li><a
+                target="_blank"
+                href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks"
+                >Designed by ©</a
+              ></li>
+            </ul>
+          </div>
+          <i onclick="closeMenu()" class='bx bx-window-close close-btn'></i>
+        </nav>
+        <div  onclick="showMenu()" class="burger-menu">
           <i class='bx bx-menu menu'></i>
         </div>
         <div class="nav__figma-link">
@@ -104,83 +125,100 @@
               <div class="progress-container">
                 <p>Amount</p>
                 <div class="progress-div">
-                  <label style="display: flex;" for="first"
-                    ><input type="radio" name="circle" id="first" />
+                  <label class="label-hide" style="display: flex;" for="first"
+                    ><input type="radio" onclick="chooseAmount('5000')" value ='5000' class="input-item" name="circle" id="first" />
                     <div class="dot"></div>
-                    <div class="outer-circle-one">
-                      <div class="inner-circle-one">
+                    <div amount-value ='5000' class="parent-circle">
+                      <div class="outer-circle">
+                        <div class="inner-circle">
+                        </div>
                       </div>
                     </div>
-                    <hr
+                    <hr class="tablet-hr-hide"
                   /></label>
-                  <label style="display: flex;" for="two"
-                    ><input type="radio" name="circle" id="two" />
+                  <label class="label-hide-tablet" style="display: flex;" for="two"
+                    ><input type="radio" value="2000" onclick="chooseAmount('2000')"  name="circle" id="two" />
                     <div class="dot"></div>
-                    <div class="outer-circle">
-                      <div class="inner-circle"></div>
+                    <div amount-value = '2000' class="parent-circle">
+                      <div class="outer-circle">
+                        <div class="inner-circle"></div>
+                      </div>
                     </div>
                     <hr /></label
-                  ><label style="display: flex;" for="three"
-                    ><input type="radio" checked name="circle" id="three" />
+                  ><label class="label-hide-tablet" style="display: flex;" for="three"
+                    ><input type="radio" onclick="chooseAmount('1000')" value="1000"  checked name="circle" id="three" />
                     <div class="dot"></div>
-                    <div class="outer-circle">
-                      <div class="inner-circle"></div>
+                    <div amount-value  = '1000' class="parent-circle ">
+                      <div class="outer-circle ">
+                        <div class="inner-circle"></div>
+                      </div>
                     </div>
                     <hr /></label
                   ><label style="display: flex;" for="four"
-                    ><input type="radio" name="circle" id="four" />
+                    ><input type="radio" onclick="chooseAmount('500')"  name="circle" id="four" />
                     <div class="dot"></div>
-                    <div class="outer-circle">
-                      <div class="inner-circle"></div>
+                    <div amount-value  = '500' class="parent-circle">
+                      <div class="outer-circle">
+                        <div class="inner-circle"></div>
+                      </div>
                     </div>
                     <hr /></label
                   ><label style="display: flex;" for="five"
-                    ><input type="radio" name="circle" id="five" />
+                    ><input type="radio" onclick="chooseAmount('250')"  name="circle" id="five" />
                     <div class="dot"></div>
-                    <div class="outer-circle">
-                      <div class="inner-circle"></div>
-                    </div>
-                    <hr class="tablet-hr-hide"/></label
-                  ><label class="label-hide-tablet" style="display: flex;" for="six"
-                    ><input type="radio" name="circle" id="six" />
-                    <div class="dot"></div>
-                    <div class="outer-circle">
-                      <div class="inner-circle"></div>
+                    <div amount-value='250' class="parent-circle">
+                      <div class="outer-circle">
+                        <div class="inner-circle"></div>
+                      </div>
                     </div>
                     <hr /></label
-                  ><label class="label-hide-tablet" style="display: flex;" for="seven"
-                    ><input type="radio" name="circle" id="seven" />
+                  ><label  onclick="chooseAmount('100')"  style="display: flex;" for="six"
+                    ><input type="radio" name="circle" id="six" />
                     <div class="dot"></div>
-                    <div class="outer-circle">
-                      <div class="inner-circle"></div>
+                    <div amount-value  = '100' class="parent-circle">
+                      <div class="outer-circle" style="display: flex;">
+                        <div class="inner-circle"></div>
+                      </div>
                     </div>
-                    <hr class="hr-hide" /></label
-                  ><label class="label-hide" style="display: flex;" for="eight"
-                    ><input type="radio" name="circle" id="eight" />
+                    <hr /></label
+                  ><label style="display: flex;" for="seven"
+                    ><input type="radio" onclick="chooseAmount('50')"   name="circle" id="seven" />
                     <div class="dot"></div>
-                    <div class="outer-circle">
-                      <div class="inner-circle"></div>
+                    <div amount-value= '50' class="parent-circle">
+                      <div class="outer-circle">
+                        <div class="inner-circle"></div>
+                      </div>
+                    </div>
+                    <hr /></label
+                  ><label style="display: flex;" for="eight"
+                    ><input type="radio" onclick="chooseAmount('25')"  name="circle" id="eight" />
+                    <div class="dot"></div>
+                    <div amount-value = '25' class="parent-circle">
+                      <div class="outer-circle">
+                        <div class="inner-circle"></div>
+                      </div>
                     </div>
                   </label>
                 </div>
                 <div class="dollar-amount">
-                  <p class="para1">$5000</p>
-                  <p class="tablet-para">$2000</p>
-                  <p class="tablet-para" style="color: #fe9013;">$1000</p>
-                  <p>$500</p>
-                  <p>$250</p>
-                  <p class="orange-para">$100</p>
-                  <p>$50</p>
-                  <p>$25</p>
+                  <p class="donation para1" amount = '5000'>$5000</p>
+                  <p class="donation tablet-para" amount = '2000'>$2000</p>
+                  <p class="donation tablet-para" amount = '1000' >$1000</p>
+                  <p class="donation" amount = '500'>$500</p>
+                  <p class="donation" amount = '250'>$250</p>
+                  <p class="donation orange-para" style="color: #fe9013;" amount = '100'>$100</p>
+                  <p class="donation" amount = '50' >$50</p>
+                  <p class="donation" amount = '25'>$25</p>
                 </div>
               </div>
               <div class="form-container">
                 <div class="another-amount-container">
                   <input
                     class="another-amount"
+                    oninput="amountValue()"
                     type="number"
                     onKeyPress="if(this.value.length==4) return false;"
-                    placeholder="Another amount"
+                    placeholder="Another amount" value="100"
                   />
                   <span>$</span>
                 </div>
@@ -426,6 +464,6 @@
         </ul>
       </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src=".././main/script.js"></script>
   </body>
 </html>
