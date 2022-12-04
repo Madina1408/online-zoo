@@ -142,9 +142,14 @@
         padding-left: 2px;
         gap: 1.5rem;
         margin: auto;
+        overflow: auto;
+        &::-webkit-scrollbar{
+          display: none;
+        }
         .slider-container {
           display: flex;
           gap: 2.9rem;
+          // width: 1500px;
           .slider-container_item {
             display: flex;
             flex-direction: column;

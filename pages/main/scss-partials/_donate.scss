@@ -160,37 +160,40 @@
             padding-right: 2.6rem;
             border-radius: 2px;
             label {
+              position: relative;
               align-items: center;
               input[type="radio"] {
                 display: none;
                 // visibility: hidden;
-                &:checked + .dot {
-                  border: 1px solid #f9804b;
-                }
+                // &:checked + .dot {
+                //   border: 1px solid #f9804b;
+                // }
               }
             }
-            // .outer-circle-one {
-            //   // position: absolute;
-            //   left: 9px;
-            //   transform: scale() ;
-            //   width: 4rem;
-            //   height: 4rem;
-            //   display: flex;
-            //   align-items: center;
-            //   justify-content: center;
-            //   border: 1px solid #fe9013;
-            //   border-radius: 50%;
-            //   .inner-circle-one {
-            //     display: flex;
-            //     align-items: center;
-            //     justify-content: center;
-            //     width: 2.3rem;
-            //     height: 2.3rem;
-            //     padding: auto;
-            //     border: 1px solid #fe9013;
-            //     border-radius: 50%;
-            //   }
-            // }
+            .outer-circle {
+              display: none;
+              position: absolute;
+              left: -15px;
+              top: -15px;
+              transform: scale() ;
+              width: 4rem;
+              height: 4rem;
+              // display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 1px solid #fe9013;
+              border-radius: 50%;
+              .inner-circle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.3rem;
+                height: 2.3rem;
+                padding: auto;
+                border: 1px solid #fe9013;
+                border-radius: 50%;
+              }
+            }
             .dot {
               background: #ffee2e;
               width: 1rem;
@@ -696,4 +699,8 @@
       }
     }
   }
+}
+
+.display-flex{
+  display: flex !important;
 }

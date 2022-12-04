@@ -11,9 +11,24 @@
       color: #333b41;
       margin-bottom: 4.7rem;
     }
+    .slider{
+      overflow: auto;
+      cursor: pointer;
+      &::-webkit-scrollbar{
+        width: 1rem;
+        height: 1rem;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: linear-gradient(45deg, orange, darksalmon);
+      }
+      &::-webkit-scrollbar-track{
+        box-shadow: inset 1px 1px 5px 2px rgb(226, 226, 226);
+      }
+    }
     .testimonials-container {
-      display: grid;
-      grid-template-columns: auto auto auto auto;
+      width: 3220px;
+      display: flex;
+      // grid-template-columns: auto auto auto auto;
       gap: 2.5rem;
       .container-item {
         background: linear-gradient(0deg, #f1f3f2, #f1f3f2);
@@ -21,7 +36,9 @@
         overflow: hidden;
         border-style: solid;
         border-width: 2px;
+        width: 27rem;
         display: flex;
+        margin-bottom: 3rem;
         flex-direction: column;
         gap: 1.1rem;
         border-color: rgba(243, 169, 248, 0.66);
@@ -53,6 +70,7 @@
       }
     }
     .line-scroll-div {
+      display: none;
       text-align: center;
       margin-top: 1.5rem;
       input[type="range"] {
@@ -125,9 +143,7 @@
           height: 391px;
           padding-top: 1rem;
         }
-        .testimonial-hide-div {
-          display: none !important;
-        }
+
       }
       .line-scroll-div{
         margin-left: -1rem;
@@ -156,8 +172,13 @@
 
 @media screen and (max-width: 640px){
   #testimonials {
+    .testimonial-hide-div {
+      display: none !important;
+    }
+    position: relative;
     .wrapper {
       .testimonials-container{
+        width: 99% !important;
         display: flex;
         flex-direction: column;
         gap: 1.5rem !important;
